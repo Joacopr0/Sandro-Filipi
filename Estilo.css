@@ -1,0 +1,292 @@
+/* Ajustes generales */
+body {
+    text-transform: uppercase;
+    background-image: url(fondode.jpg);
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: auto;
+    box-sizing: border-box;
+    overflow-x: hidden; /* Elimina el desplazamiento horizontal */
+}
+
+/* Texto de envíos gratis arriba de todo */
+.primertexto {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: black;
+    color: white;
+    padding: 0.5rem;
+    text-align: center;
+    font-size: 1.2rem;
+    width: 100%;
+    margin: 0;
+}
+
+/* Imagen del caballo en el medio */
+.box {
+    width: 100%;
+    height: 200px;
+    background: url("https://i.postimg.cc/25B8WSkj/hermano-de-sandro.jpg") center/cover fixed;
+    position: relative;
+    margin: 2rem 0;
+}
+
+/* Buscador encima de la imagen */
+.buscador {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 0.5rem;
+    border-radius: 10px;
+}
+
+.buscador input {
+    border: none;
+    padding: 0.5rem;
+    font-size: 1rem;
+    outline: none;
+    width: 250px;
+    border-radius: 5px 0 0 5px;
+}
+
+.buscador button {
+    border: none;
+    background: black;
+    color: white;
+    padding: 0.5rem;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+}
+
+/* Encabezado */
+header {
+    text-align: center;
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Menú de navegación con logo */
+nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    flex-wrap: wrap;
+}
+
+/* Logo más grande */
+.logo {
+    width: 350px;
+    height: auto;
+    margin-left: 1rem;
+    transition: 0.3s ease-in-out;
+}
+
+.logo:hover {
+    transform: scale(1.2);
+}
+
+/* Lista de navegación centrada */
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+    list-style: none;
+}
+
+nav ul li {
+    padding: 0.5rem 1rem;
+    text-align: center;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.3rem;
+    white-space: nowrap;
+
+}
+/* Efecto hover para la lista de categorías */
+nav ul li {
+    transition: transform 0.4s ease-in-out;
+}
+
+nav ul li:hover {
+    transform: translateX(10px); /* Se mueve un poco hacia el centro */
+}
+
+
+/* Estilos generales para productos */
+.producto {
+    text-align: center;
+    border: 1.5px solid rgb(85, 82, 82);
+    background-color: white;
+    margin-bottom: 5%;
+    padding: 1rem;
+    transition: 0.3s;
+}
+
+.producto:hover {
+    transform: scale(1.05);
+}
+
+.nombre-producto {
+    font-size: 20px;
+    color: black;
+    margin-top: 5px;
+}
+
+.precio-producto {
+    font-size: 25px;
+    color: black;
+    letter-spacing: 2px;
+    margin: 2px 0 35px;
+}
+
+div img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+/* Diseño principal con productos */
+main {
+    max-width: 100vw;
+    margin: 2rem auto;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 2rem;
+}
+
+/* Pie de página */
+footer p {
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 0.5rem;
+    width: 100vw;
+    margin-bottom: 0;
+    box-sizing: border-box;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .logo {
+        width: 60%;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    main {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Ajustes específicos para iPhone 12 Pro Max y pantallas pequeñas */
+@media (max-width: 430px) {
+    main {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1rem;
+        padding: 1rem;
+    }
+
+    .logo {
+        width: 80%;
+        margin: 0 auto;
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        max-width: 100%;
+    }
+
+    nav ul li {
+        width: 100%;
+    }
+
+    .buscador input {
+        width: 160px;
+    }
+
+    .producto {
+        padding: 0.8rem;
+    }
+
+    .nombre-producto {
+        font-size: 18px;
+    }
+
+    .precio-producto {
+        font-size: 20px;
+    }
+}
+
+/* Botón ver más */
+.btn-ver-mas {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn-ver-mas:hover {
+    background-color: gray;
+}
+.subpagina .productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ajusta automáticamente las columnas */
+    gap: 20px; /* Espacio entre productos */
+    justify-content: center; /* Centrar productos */
+    align-items: start;
+}
+
+.subpagina .producto {
+    text-align: center;
+    border: 1.5px solid rgb(85, 82, 82);
+    background-color: white;
+    padding: 1rem;
+    transition: 0.3s;
+}
+
+.subpagina .producto:hover {
+    transform: scale(1.05);
+}
+
+.subpagina .nombre-producto {
+    font-size: 20px;
+    color: black;
+    margin-top: 5px;
+}
+
+.subpagina .precio-producto {
+    font-size: 25px;
+    color: black;
+    letter-spacing: 2px;
+    margin: 2px 0 35px;
+}
+
+.subpagina .producto img {
+    max-width: 250px; /* Tamaño uniforme para las imágenes */
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+

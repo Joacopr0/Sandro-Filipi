@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contacto - Tienda de Bolsos</title>
+  <link rel="stylesheet" href="Estilo.css">
+  <link rel="icon" type="image/png" href="iconooo.jpg">
+</head>
+
+<body>
+  <header>
+
+    <p class="primertexto">envios gratis a partir de <strong>220$</strong></p>
+
+    <nav >
+      <a href="index.html">
+        <img class="logo" src="icon_si.png" alt="Logo Sandro Filipi">
+    </a>
+      <ul>
+        <li class="texto"><a href="index.html">Inicio</a></li>
+        <li class="texto"><a href="Remeras.html">Remeras</a></li>
+        <li class="texto"><a href="Perfumes.html">Perfumes</a></li>
+        <li class="texto"><a href="pulseras.html">Pulseras</a></li>
+        <li class="texto"><a href="mochilas.html">Mochilas</a></li>
+        <li class="texto"><a href="Carteras.html">Carteras</a></li>
+        <li class="texto"><a href="Contactanos.html">Contáctanos</a></li>
+        <li class="texto"><a href="infosobre.html">¿Quiénes somos?</a></li>
+      </ul>
+    </nav>
+    
+    <div class="box">
+      <div class="buscador">
+          <input type="text" id="searchInput" placeholder="Buscar productos...">
+          <button  onclick="buscarProductos()">🔍</button>
+      </div>
+  </div>
+  </header>
+
+  <main>
+    <section class="contacto con-padding">
+      <h2>Contactanos</h2>
+      <div class="formulario">
+        <form action="" method="post">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre completo">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="Ingrese su email">
+          <label for="asunto">Asunto:</label>
+          <input type="text" id="asunto" name="asunto" placeholder="Ingrese el asunto del mensaje">
+          <label for="mensaje">Mensaje:</label>
+          <textarea id="mensaje" name="mensaje" placeholder="Escriba su mensaje"></textarea>
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+      <div class="informacion">
+        <h3>Datos de contacto</h3>
+        <p>Telefono: +54 11 1234 5678</p>
+        <p>Email: contacto@tiendadebolsos.com</p>
+        <p>Dirección: Calle Falsa 123, Ciudad, Provincia</p>
+        <a href="https://www.google.com/maps/search/Calle+Falsa+123,Ciudad,Provincia" target="_blank">Ver en Google Maps</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Tienda de Bolsos. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>
